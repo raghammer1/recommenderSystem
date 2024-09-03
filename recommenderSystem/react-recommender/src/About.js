@@ -8,7 +8,7 @@ function AboutPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/movies`);
+        const response = await fetch(`http://localhost:3001/movies`);
         const data = await response.json();
         setMovies(data);
       } catch (error) {
@@ -24,7 +24,7 @@ function AboutPage() {
       try {
         // const title = "Pirates of the Caribbean: At World's End";
         const response = await fetch(
-          `http://localhost:3000/recommender?title=${title}`
+          `http://localhost:3001/recommender?title=${title}`
         );
         const data = await response.json();
         console.log(JSON.parse(data.data));
